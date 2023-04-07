@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./index.js" defer></script>
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="main_container">
+        <div class="app_title">
+          <h1>Password Generator</h1>
+        </div>
+
+        <div class="main_modal">
+          <div class="input_box">
+            <h3 class="password_text"></h3>
+            <img id="copy_icon" class="copy_icon" src="./assets/copy.svg" />
+          </div>
+
+          <div class="parameters_box">
+            <div class="length_box">
+              <h4 class="label">Character Length</h4>
+              <h4 class="value" id="length_value">0</h4>
+            </div>
+
+            <div class="slider_input">
+              <input
+                name="length"
+                id="slider"
+                type="range"
+                min="0"
+                value="0"
+                max="10"
+              />
+            </div>
+
+            <div class="checkboxes">
+              <div class="checkbox_comp">
+                <input name="uppercase" type="checkbox" id="uppercase" />
+                <label>Include Uppercase Letters</label>
+              </div>
+              <div class="checkbox_comp">
+                <input name="lowercase" type="checkbox" id="lowercase" />
+                <label>Include Lowercase Letters</label>
+              </div>
+              <div class="checkbox_comp">
+                <input name="numbers" type="checkbox" id="numbers" />
+                <label>Include Numbers</label>
+              </div>
+              <div class="checkbox_comp">
+                <input name="symbols" type="checkbox" id="symbols" />
+                <label>Include Symbols</label>
+              </div>
+            </div>
+
+            <div class="strength_box">
+              <h3 class="strength_title">Strength</h3>
+
+              <div class="strength_comp">
+                <h3>Medium</h3>
+                <div class="levels">
+                  <div id="uppercaseLevel" class="level"></div>
+                  <div id="lowercaseLevel" class="level"></div>
+                  <div id="numbersLevel" class="level"></div>
+                  <div id="symbolsLevel" class="level"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="generate_box">
+              <button class="generate_button">
+                Generate <img src="./assets/arrow.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
